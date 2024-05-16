@@ -1,9 +1,11 @@
-resources:
+`
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Subscription'
+    deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'ado-harrisfoundation-sp'
     subscriptionId: '91897382-5384-4cf1-b735-1a1e28c7f08d'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'tailspin-space-game-rg'
     location: 'East US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://github.com/aharris35/mslearn-tailspin-spacegame-web-deploy.git'
